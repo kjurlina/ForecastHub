@@ -1,0 +1,4 @@
+FTP Address :: ftp://radar.dhz.hr
+FTP Username :: gtka
+FTP Password :: 3P$44hjvfX
+FTP Folder :: HR40_podaci
