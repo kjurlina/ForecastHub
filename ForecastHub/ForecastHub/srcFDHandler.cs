@@ -26,7 +26,7 @@ namespace ForecastHub
             string[] entry = new string[5];
 
             // Find target file name
-            if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour < 15)
+            if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour < 16)
             {
                 targetFileName = "KAR_" + DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString("00") + DateTime.Now.Day.ToString("00") + "_00.xml";
             }
@@ -53,7 +53,7 @@ namespace ForecastHub
                         {
                             entry = new string[5];
                             DateTime.TryParse(terminNode.Attributes["datum"].Value + " " + terminNode.Attributes["sat"].Value.Replace("UTC","") + ":00:00", out ts);
-                            entry[0] = ts.ToString();
+                            entry[0] = ts.ToString("yyyy-MM-ddTHH:mm:ssZ");
                             entry[1] = terminNode.SelectSingleNode("temperatura")?.InnerText;
                             entry[2] = terminNode.SelectSingleNode("brzina_vjetra")?.InnerText;
                             entry[3] = terminNode.SelectSingleNode("smjer_vjetra")?.InnerText;

@@ -80,13 +80,13 @@ namespace ForecastHub
                         i++;
                     }
 
-                    if (FTPAddress != null && FTPUsername != null && FTPPassword != null && FTPFolder != null)
+                    if (FTPAddress == null || FTPUsername == null || FTPPassword == null || FTPFolder == null)
                     {
-                        return true;
+                        return false;
                     }
                     else
                     {
-                        return false;
+                        return true;
                     }
 
                 }

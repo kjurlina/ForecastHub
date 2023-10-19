@@ -45,6 +45,25 @@ namespace ForecastHub
                 Logger.ToLogFile("Failed to load project data. Exiting application");
             }
 
+            // Test
+            using (RTHandler RTHandler = new RTHandler())
+            {
+                (bool RetVal, List<string[]> Result) = RTHandler.FetchData();
+                if (RetVal)
+                {
+                    foreach (string[] s in Result)
+                    {
+                        Console.WriteLine(string.Join(Environment.NewLine, s));
+                    }
+                }
+                else
+                {
+                    Logger.ToLogFile("Failed to fetch current weather data. Not calling SQL writer");
+                }
+            }
+
+                return;
+
             // Configure and start cron jobs
             // Create and configure scheduler factory
             ISchedulerFactory schedulerFactory = new StdSchedulerFactory();
@@ -57,19 +76,26 @@ namespace ForecastHub
             IJobDetail FDataJob = JobBuilder.Create<FDataJob>()
                 .WithIdentity("FDataJob", "FDataJobGroup")
                 .Build();
+            IJobDetail RDataJob = JobBuilder.Create<RDataJob>()
+                .WithIdentity("RDataJob", "RDataJobGroup")
+                .Build();
             ITrigger CDataTrigger = TriggerBuilder.Create()
                 .WithIdentity("CDataTrigger", "CDataTriggerGroup")
-                .WithCronSchedule("0/5 * * ? * *") 
+                .WithCronSchedule("0 15 * ? * *") 
                 .Build();
             ITrigger FDataTrigger = TriggerBuilder.Create()
                 .WithIdentity("FDataTrigger", "FDataTriggerGroup")
-                .WithCronSchedule("0/10 * * ? * *")
+                .WithCronSchedule("0 0 6,18 * * ?")
+                .Build();
+            ITrigger RDataTrigger = TriggerBuilder.Create()
+                .WithIdentity("RDataTrigger", "RDataTriggerGroup")
+                .WithCronSchedule("0/10 * * ? * * *")
                 .Build();
 
             // Schedule the jobs with the triggers
             await scheduler.ScheduleJob(CDataJob, CDataTrigger);
             await scheduler.ScheduleJob(FDataJob, FDataTrigger);
-
+            await scheduler.ScheduleJob(RDataJob, RDataTrigger);
             // Start the scheduler
             await scheduler.Start();
 
@@ -130,6 +156,30 @@ namespace ForecastHub
                         Logger.ToLogFile("Failed to fetch weather forecast data. Not calling SQL writer");
                     }
                 }
+                return Task.CompletedTask;
+            }
+        }
+
+        // Routine to handle runtime data
+        public class RDataJob : IJob
+        {
+            public Task Execute(IJobExecutionContext context)
+            {
+                //using (FDHandler FDHandler = new FDHandler())
+                //{
+                //    (bool RetVal, List<string[]> Result) = FDHandler.FetchData();
+                //    if (RetVal)
+                //    {
+                //        using (SqlHandler SqlHandler = new SqlHandler())
+                //        {
+                //            SqlHandler.WriteFData(Result);
+                //        }
+                //    }
+                //    else
+                //    {
+                //        Logger.ToLogFile("Failed to fetch runtime data. Not calling SQL writer");
+                //    }
+                //}
                 return Task.CompletedTask;
             }
         }
