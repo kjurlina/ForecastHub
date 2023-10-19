@@ -45,25 +45,6 @@ namespace ForecastHub
                 Logger.ToLogFile("Failed to load project data. Exiting application");
             }
 
-            // Test
-            using (RTHandler RTHandler = new RTHandler())
-            {
-                (bool RetVal, List<string[]> Result) = RTHandler.FetchData();
-                if (RetVal)
-                {
-                    foreach (string[] s in Result)
-                    {
-                        Console.WriteLine(string.Join(Environment.NewLine, s));
-                    }
-                }
-                else
-                {
-                    Logger.ToLogFile("Failed to fetch current weather data. Not calling SQL writer");
-                }
-            }
-
-                return;
-
             // Configure and start cron jobs
             // Create and configure scheduler factory
             ISchedulerFactory schedulerFactory = new StdSchedulerFactory();
@@ -165,21 +146,21 @@ namespace ForecastHub
         {
             public Task Execute(IJobExecutionContext context)
             {
-                //using (FDHandler FDHandler = new FDHandler())
-                //{
-                //    (bool RetVal, List<string[]> Result) = FDHandler.FetchData();
-                //    if (RetVal)
-                //    {
-                //        using (SqlHandler SqlHandler = new SqlHandler())
-                //        {
-                //            SqlHandler.WriteFData(Result);
-                //        }
-                //    }
-                //    else
-                //    {
-                //        Logger.ToLogFile("Failed to fetch runtime data. Not calling SQL writer");
-                //    }
-                //}
+                using (RTHandler RTHandler = new RTHandler())
+                {
+                    (bool RetVal, List<string[]> Result) = RTHandler.FetchData();
+                    if (RetVal)
+                    {
+                        using (SqlHandler SqlHandler = new SqlHandler())
+                        {
+                            SqlHandler.WriteFData(Result);
+                        }
+                    }
+                    else
+                    {
+                        Logger.ToLogFile("Failed to fetch runtime data. Not calling SQL writer");
+                    }
+                }
                 return Task.CompletedTask;
             }
         }

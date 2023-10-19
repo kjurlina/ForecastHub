@@ -152,11 +152,20 @@ namespace ForecastHub
         public void WriteRData(List<string[]> data)
         {
             int entriesCreated = 0;
-            int entriesUpdated = 0;
 
             foreach (string[] line in data)
             {
-
+                // Handle all received tags
+                int count = CheckDatabaseEntry(line[0], line[1]);
+                if (count == 0)
+                {
+                    CreateDatabaseEntry(line[0], line[1], line[2]);
+                    entriesCreated++;
+                }
+            }
+            if (entriesCreated > 0)
+            {
+                Logger.ToLogFile($"Writting weather forecast data to database :: Entries created = {entriesCreated}");
             }
         }
 
@@ -292,6 +301,29 @@ namespace ForecastHub
                         {
                             float.TryParse(tagValue, NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                         }
+                        // Runtime data: start temperature
+                        else if (tagName.Contains("TO_000100_TT101"))
+                        {
+                            value = (float)ConvertToCelsius(tagValue);
+                        }
+
+                        // Runtime data: return temperature
+                        else if (tagName.Contains("TO_000100_TT101"))
+                        {
+                            value = (float)ConvertToCelsius(tagValue);
+                        }
+
+                        // Runtime data: flow
+                        else if (tagName.Contains("TO_000100_TT101"))
+                        {
+
+                        }
+
+                        // Runtime data: power
+                        else if (tagName.Contains("TO_000100_TT101"))
+                        {
+
+                        }
 
                         insertCommand.Parameters.AddWithValue("@TagName", tagName);
                         insertCommand.Parameters.AddWithValue("@TagTime", tagTimeStamp);
@@ -413,6 +445,31 @@ namespace ForecastHub
         {
             // TBD
             return 0.0;
+        }
+
+        // Method to decode °C to °F
+        private double ConvertToCelsius(string Fahrenheit)
+        {
+            if (string.IsNullOrEmpty(Fahrenheit))
+            {
+                Logger.ToLogFile($"Error while converting F to C :: String null or empty");
+                return -273.15;
+            }
+            else if (!double.TryParse(Fahrenheit, out double fahrenheit))
+            {
+                Console.WriteLine($"Error while converting F to C :: Could not convert string to double");
+                return -273.15;
+            }
+            else if (fahrenheit < -459.67)
+            {
+                Console.WriteLine($"Error while converting F to C :: Input temperature below absolute zero");
+                return -273.15;
+            }
+            else
+            {
+                double celsius = (fahrenheit - 32) * 5 / 9;
+                return celsius;
+            }
         }
 
         // Dispose method
