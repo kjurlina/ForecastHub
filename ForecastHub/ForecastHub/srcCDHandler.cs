@@ -46,7 +46,7 @@ namespace ForecastHub
                         try
                         {
                             DateTime.TryParse(dateNode.InnerText + " " + timeNode.InnerText + ":00:00", out ts);
-                            entry[0] = ts.ToString();
+                            entry[0] = ts.ToString("yyyy-MM-ddTHH:mm:ssZ");
                         }
                         catch (Exception ex)
                         {

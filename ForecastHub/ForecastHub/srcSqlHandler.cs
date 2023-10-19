@@ -8,14 +8,16 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Globalization;
 using System.Threading;
+using System.Runtime.CompilerServices;
 
 namespace ForecastHub
 {
     internal class SqlHandler : IDisposable
     {
         // Variables
-        private readonly string connectionString = "Server=HRATOMX8162\\WINCCFLEX2014;Database=Forecast;Integrated Security=True";
-        private readonly string tableName = "[test].[ForecastRaw]";
+        private readonly string connectionString = "Server=GTKC-TERMIS\\TERMIS;Database=termisdb;Integrated Security=True";
+        private readonly string forecastTableName = "[test].[ForecastRaw]";
+        private readonly string runtimeTableName = "[dbo].[tblTagVals]";
 
         // Constructor
         public SqlHandler() { }
@@ -82,7 +84,7 @@ namespace ForecastHub
         }
 
         // Method to write weather forecast data to SQL server
-        public void WriteFData (List<string []> data)
+        public void WriteFData(List<string[]> data)
         {
             int entriesCreated = 0;
             int entriesUpdated = 0;
@@ -145,6 +147,83 @@ namespace ForecastHub
 
             Logger.ToLogFile($"Writting weather forecast data to database :: Entries created = {entriesCreated}, Entries updated = {entriesUpdated}");
         }
+
+        // Method to write runtime data to SQL server
+        public void WriteRData(List<string[]> data)
+        {
+            int entriesCreated = 0;
+            int entriesUpdated = 0;
+
+            foreach (string[] line in data)
+            {
+
+            }
+        }
+
+        // Method to read runtime data
+        public List<string> ReadRData()
+        {
+            List<string> result = new List<string>();
+
+            try 
+            {
+                // Define SQL query paramaters
+                DateTime now = DateTime.Now;
+                // DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                DateTime targetTime = DateTime.Parse("2022-12-20 08:15:00");
+                int toleranceMinutes = 15;
+                int[] tagIDs = { 1371, 1372, 1373, 1374 };
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    foreach (int tagID in tagIDs)
+                    {
+                        // Define SQL query with parameters
+                        string sqlQuery = $"SELECT TOP 1 * FROM {runtimeTableName} " +
+                                          "WHERE tblTagDefs_fk = @TagID " +
+                                          "AND TimeTag >= @StartTime " +
+                                          "AND TimeTag <= @EndTime " +
+                                          "ORDER BY ABS(DATEDIFF(MINUTE, @TargetTime, TimeTag))";
+
+                        using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                        {
+                            command.Parameters.AddWithValue("@TagID", tagID);
+                            command.Parameters.AddWithValue("@StartTime", targetTime.AddMinutes(-toleranceMinutes));
+                            command.Parameters.AddWithValue("@EndTime", targetTime.AddMinutes(toleranceMinutes));
+                            command.Parameters.AddWithValue("@TargetTime", targetTime);
+
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    int selectedTagID = reader.GetInt32(reader.GetOrdinal("tblTagDefs_fk"));
+                                    DateTime timestamp = reader.GetDateTime(reader.GetOrdinal("TimeTag"));
+                                    double value = reader.GetDouble(reader.GetOrdinal("Value"));
+                                    string resultString = $"TagID = {selectedTagID} :: TagTimeStamp = {timestamp} :: TagValue = {value}";
+                                    result.Add(resultString);
+                                }
+                            }
+                        }
+                    }
+
+                    foreach (string s in result)
+                    {
+                        Console.WriteLine(s);
+                    }
+                    Console.WriteLine();
+
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Logger.ToLogFile($"Error while trying to read runtime data :: {ex}");
+                return null;
+;            }
+        }
         
         // Method to check single database entry
         private int CheckDatabaseEntry(string tagName, string tagTimeStamp)
@@ -152,7 +231,7 @@ namespace ForecastHub
             try
             {
                 // Define the SQL query
-                string countQuery = $"SELECT COUNT(*) FROM {tableName} WHERE TagName = @TagName AND TagTime = @TagTime";
+                string countQuery = $"SELECT COUNT(*) FROM {forecastTableName} WHERE TagName = @TagName AND TagTime = @TagTime";
 
                 // Open connetction and check database entry existance
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -179,7 +258,7 @@ namespace ForecastHub
             try
             {
                 // Define the SQL query
-                string insertQuery = $"INSERT INTO {tableName} (TagName, TagTime, TagValue) VALUES (@TagName, @TagTime, @TagValue)";
+                string insertQuery = $"INSERT INTO {forecastTableName} (TagName, TagTime, TagValue) VALUES (@TagName, @TagTime, @TagValue)";
 
                 // Open connetction and create database entry
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -196,16 +275,7 @@ namespace ForecastHub
                         // Wind direction is decoded in a separate method based on wind rose compass, but only for current weather data
                         else if (tagName.Contains("WindDirection_RT"))
                         {
-                            try
-                            {
-                                value = (float)DecodeWindDirection(tagValue);
-                            }
-                            catch (ArgumentException ex)
-                            {
-                                Logger.ToLogFile(ex.Message);
-                                Logger.ToLogFile("There was an error decoding wind direction. Using -1.0 as value");
-                                value = (float)-1.0;
-                            }
+                            value = (float)DecodeWindDirection(tagValue);
                         }
                         // Wind speed for forecast data it is already in azimuth degrees. Thanks DHMZ :-)
                         else if (tagName.Contains("WindDirection_F_1H3D"))
@@ -244,7 +314,7 @@ namespace ForecastHub
             try
             {
                 // Define the SQL query
-                string updateQuery = $"UPDATE {tableName} SET TagValue = @TagValue WHERE TagName = @TagName AND TagTime = @TagTime";
+                string updateQuery = $"UPDATE {forecastTableName} SET TagValue = @TagValue WHERE TagName = @TagName AND TagTime = @TagTime";
 
                 // Open connetction and create database entry
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -292,38 +362,49 @@ namespace ForecastHub
         // Method to decode wind direction to float
         private double DecodeWindDirection(string windRoseDirection)
         {
-            // Create a dictionary to map wind rose directions to azimuth degrees
-            Dictionary<string, double> windRoseToAzimuthMap = new Dictionary<string, double>
+            try
             {
-                {"N", 0.0},
-                {"NNE", 22.5},
-                {"NE", 45.0},
-                {"ENE", 67.5},
-                {"E", 90.0},
-                {"ESE", 112.5},
-                {"SE", 135.0},
-                {"SSE", 157.5},
-                {"S", 180.0},
-                {"SSW", 202.5},
-                {"SW", 225.0},
-                {"WSW", 247.5},
-                {"W", 270.0},
-                {"WNW", 292.5},
-                {"NW", 315.0},
-                {"NNW", 337.5}
-            };
+                // Create a dictionary to map wind rose directions to azimuth degrees
+                Dictionary<string, double> windRoseToAzimuthMap = new Dictionary<string, double>
+                {
+                    {"N", 0.0},
+                    {"NNE", 22.5},
+                    {"NE", 45.0},
+                    {"ENE", 67.5},
+                    {"E", 90.0},
+                    {"ESE", 112.5},
+                    {"SE", 135.0},
+                    {"SSE", 157.5},
+                    {"S", 180.0},
+                    {"SSW", 202.5},
+                    {"SW", 225.0},
+                    {"WSW", 247.5},
+                    {"W", 270.0},
+                    {"WNW", 292.5},
+                    {"NW", 315.0},
+                    {"NNW", 337.5}
+                };
 
-            // Convert the wind rose direction to uppercase for case insensitivity
-            windRoseDirection = windRoseDirection.ToUpper();
+                // Convert the wind rose direction to uppercase for case insensitivity
+                windRoseDirection = windRoseDirection.ToUpper();
 
-            // Check if the wind rose direction exists in the dictionary
-            if (windRoseToAzimuthMap.ContainsKey(windRoseDirection))
-            {
-                return windRoseToAzimuthMap[windRoseDirection];
+                // Check if the wind rose direction exists in the dictionary
+                double azimuth;
+                if (windRoseToAzimuthMap.TryGetValue(windRoseDirection, out azimuth))
+                {
+                    return azimuth;
+                }
+                else
+                {
+                    // Handle the case where the wind rose direction is not found
+                    Logger.ToLogFile($"Invalid wind rose direction");
+                    return -1.0;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                throw new ArgumentException("Invalid wind rose direction");
+                Logger.ToLogFile($"There was an error decoding wind direction :: {ex.Message}");
+                return -1.0;
             }
         }
 

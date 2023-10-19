@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="srcRTHandler.cs" />
     <Compile Include="srcSqlHandler.cs" />
     <Compile Include="srcCDHandler.cs" />
     <Compile Include="srcLogger.cs" />
