@@ -2783,3 +2783,571 @@ Error Number:207,State:1,Class:16
 19.10.2023 10:11:20.028 :: Project data loaded sucessfully
 19.10.2023 10:12:03.957 :: Application closed
 19.10.2023 10:12:03.958 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 07:58:33.552 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 07:58:33.567 :: Application started
+20.10.2023 07:58:33.598 :: Project data loaded sucessfully
+20.10.2023 08:00:12.864 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:00:12.880 :: Application started
+20.10.2023 08:00:12.880 :: Project data loaded sucessfully
+20.10.2023 08:02:44.208 :: Error while checking database entry existence Karlovac_Temperature_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.224 :: Error while checking database entry existence Karlovac_WindSpeed_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.365 :: Error while checking database entry existence Karlovac_WindDirection_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.505 :: Error while checking database entry existence Karlovac_Cloudiness_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.560 :: Error while checking database entry existence Karlovac_Temperature_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.884 :: Error while checking database entry existence Karlovac_WindSpeed_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.906 :: Error while checking database entry existence Karlovac_WindDirection_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:44.938 :: Error while checking database entry existence Karlovac_Cloudiness_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.020 :: Error while checking database entry existence Karlovac_Temperature_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.036 :: Error while checking database entry existence Karlovac_WindSpeed_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.111 :: Error while checking database entry existence Karlovac_WindDirection_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.302 :: Error while checking database entry existence Karlovac_Cloudiness_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.351 :: Error while checking database entry existence Karlovac_Temperature_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.458 :: Error while checking database entry existence Karlovac_WindSpeed_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.474 :: Error while checking database entry existence Karlovac_WindDirection_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.732 :: Error while checking database entry existence Karlovac_Cloudiness_F_1H3D with time stamp XX_000000_QT102 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 253
+ClientConnectionId:bca9935a-28ff-41bd-b55b-af58a6fa131d
+Error Number:241,State:1,Class:16
+20.10.2023 08:02:45.911 :: Writting weather forecast data to database :: Entries created = 0, Entries updated = 0
+20.10.2023 08:02:46.053 :: Application closed
+20.10.2023 08:02:46.068 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:02:58.817 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:02:58.833 :: Application started
+20.10.2023 08:02:58.833 :: Project data loaded sucessfully
+20.10.2023 08:04:35.380 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:04:35.396 :: Application started
+20.10.2023 08:04:35.396 :: Project data loaded sucessfully
+20.10.2023 08:05:28.208 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:05:28.223 :: Application started
+20.10.2023 08:05:28.223 :: Project data loaded sucessfully
+20.10.2023 08:06:13.708 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:06:13.723 :: Application started
+20.10.2023 08:06:13.723 :: Project data loaded sucessfully
+20.10.2023 08:08:20.348 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:08:20.364 :: Application started
+20.10.2023 08:08:20.364 :: Project data loaded sucessfully
+20.10.2023 08:15:23.205 :: Error while checking database entry existence XX_000000_QT102 with time stamp TagTimeStamp = 20.12.2022. 8:22:57 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 246
+ClientConnectionId:1feebae1-314b-4185-97c5-a8fa9f763440
+Error Number:241,State:1,Class:16
+20.10.2023 08:15:23.286 :: Error while checking database entry existence XX_000000_QT102 with time stamp TagTimeStamp = 20.12.2022. 8:22:57 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 246
+ClientConnectionId:1feebae1-314b-4185-97c5-a8fa9f763440
+Error Number:241,State:1,Class:16
+20.10.2023 08:15:23.494 :: Error while checking database entry existence XX_000000_QT102 with time stamp TagTimeStamp = 20.12.2022. 8:22:57 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 246
+ClientConnectionId:1feebae1-314b-4185-97c5-a8fa9f763440
+Error Number:241,State:1,Class:16
+20.10.2023 08:15:23.621 :: Error while checking database entry existence XX_000000_QT102 with time stamp TagTimeStamp = 20.12.2022. 8:22:57 :: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at ForecastHub.SqlHandler.CheckDatabaseEntry(String tagName, String tagTimeStamp) in C:\ForecastHub\ForecastHub\ForecastHub\srcSqlHandler.cs:line 246
+ClientConnectionId:1feebae1-314b-4185-97c5-a8fa9f763440
+Error Number:241,State:1,Class:16
+20.10.2023 08:15:23.667 :: Application closed
+20.10.2023 08:15:23.669 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:15:35.395 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:15:35.395 :: Application started
+20.10.2023 08:15:35.395 :: Project data loaded sucessfully
+20.10.2023 08:16:49.005 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:16:49.036 :: Application started
+20.10.2023 08:16:49.036 :: Project data loaded sucessfully
+20.10.2023 08:16:53.630 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 08:17:02.426 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:17:02.442 :: Application started
+20.10.2023 08:17:02.442 :: Project data loaded sucessfully
+20.10.2023 08:17:38.067 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:17:38.083 :: Application started
+20.10.2023 08:17:38.083 :: Project data loaded sucessfully
+20.10.2023 08:19:59.911 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:19:59.927 :: Application started
+20.10.2023 08:19:59.927 :: Project data loaded sucessfully
+20.10.2023 08:20:41.833 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:20:41.848 :: Application started
+20.10.2023 08:20:41.848 :: Project data loaded sucessfully
+20.10.2023 08:22:02.489 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:22:02.505 :: Application started
+20.10.2023 08:22:02.505 :: Project data loaded sucessfully
+20.10.2023 08:22:54.611 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:22:54.645 :: Application started
+20.10.2023 08:22:54.661 :: Project data loaded sucessfully
+20.10.2023 08:24:59.442 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:24:59.458 :: Application started
+20.10.2023 08:24:59.458 :: Project data loaded sucessfully
+20.10.2023 08:26:37.427 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:26:37.442 :: Application started
+20.10.2023 08:26:37.442 :: Project data loaded sucessfully
+20.10.2023 08:27:27.005 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:27:27.020 :: Application started
+20.10.2023 08:27:27.020 :: Project data loaded sucessfully
+20.10.2023 08:28:58.145 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:28:58.145 :: Application started
+20.10.2023 08:28:58.161 :: Project data loaded sucessfully
+20.10.2023 08:31:10.989 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:31:11.005 :: Application started
+20.10.2023 08:31:11.005 :: Project data loaded sucessfully
+20.10.2023 08:41:31.270 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:41:31.286 :: Application started
+20.10.2023 08:41:31.302 :: Project data loaded sucessfully
+20.10.2023 08:44:39.848 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:44:39.864 :: Application started
+20.10.2023 08:44:39.864 :: Project data loaded sucessfully
+20.10.2023 08:45:11.130 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:45:11.130 :: Application started
+20.10.2023 08:45:11.145 :: Project data loaded sucessfully
+20.10.2023 08:48:50.317 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 08:48:50.333 :: Application started
+20.10.2023 08:48:50.333 :: Project data loaded sucessfully
+20.10.2023 08:49:51.598 :: Writting weather forecast data to database :: Entries created = 3
+20.10.2023 08:49:51.614 :: Application closed
+20.10.2023 08:49:51.614 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 09:04:18.614 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 09:04:18.614 :: Application started
+20.10.2023 09:04:18.630 :: Project data loaded sucessfully
+20.10.2023 09:05:48.380 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 09:05:48.380 :: Application started
+20.10.2023 09:05:48.395 :: Project data loaded sucessfully
+20.10.2023 09:14:41.692 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 09:14:41.708 :: Application started
+20.10.2023 09:14:41.723 :: Project data loaded sucessfully
+20.10.2023 09:14:56.674 :: Writting weather forecast data to database :: Entries created = 2
+20.10.2023 09:14:56.680 :: Application closed
+20.10.2023 09:14:56.681 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:49:54.958 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:49:54.973 :: Application started
+20.10.2023 12:49:55.036 :: Project data loaded sucessfully
+20.10.2023 12:49:55.489 :: Application closed
+20.10.2023 12:49:55.489 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:51:34.286 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:51:34.302 :: Application started
+20.10.2023 12:51:34.302 :: Project data loaded sucessfully
+20.10.2023 12:51:34.911 :: Writting weather forecast data to database :: Entries created = 4
+20.10.2023 12:51:34.911 :: Application closed
+20.10.2023 12:51:34.911 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:52:15.036 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:52:15.052 :: Application started
+20.10.2023 12:52:15.052 :: Project data loaded sucessfully
+20.10.2023 12:54:23.958 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:54:23.973 :: Application started
+20.10.2023 12:54:23.973 :: Project data loaded sucessfully
+20.10.2023 12:59:24.177 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 12:59:24.192 :: Application started
+20.10.2023 12:59:24.192 :: Project data loaded sucessfully
+20.10.2023 13:04:59.666 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 13:04:59.677 :: Application started
+20.10.2023 13:04:59.677 :: Project data loaded sucessfully
+20.10.2023 13:06:00.130 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 13:06:00.145 :: Application started
+20.10.2023 13:06:00.145 :: Project data loaded sucessfully
+20.10.2023 13:06:56.348 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 13:06:56.348 :: Application started
+20.10.2023 13:06:56.364 :: Project data loaded sucessfully
+20.10.2023 13:08:52.672 :: Writting weather forecast data to database :: Entries created = 4
+20.10.2023 13:08:52.678 :: Application closed
+20.10.2023 13:08:52.679 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 13:43:50.553 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+20.10.2023 13:43:50.584 :: Application started
+20.10.2023 13:43:50.584 :: Project data loaded sucessfully
+20.10.2023 14:20:01.272 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 15:20:00.136 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 16:20:00.132 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 17:20:01.142 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 18:00:01.619 :: Writting weather forecast data to database :: Entries created = 144, Entries updated = 148
+20.10.2023 18:20:01.117 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 19:20:00.117 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 20:20:00.134 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 21:20:00.159 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 22:20:01.020 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+20.10.2023 23:20:00.236 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 00:20:00.150 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 01:20:00.563 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 02:20:00.093 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 03:20:01.120 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 04:20:01.108 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 05:20:00.085 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 06:00:01.633 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+21.10.2023 06:20:00.131 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 07:20:01.164 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 08:20:00.100 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 09:20:01.130 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 10:20:00.134 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 11:20:00.164 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 12:20:01.146 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 13:20:00.098 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 14:20:00.092 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 15:20:01.112 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 16:20:00.128 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 17:20:00.095 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 18:00:00.720 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+21.10.2023 18:20:01.218 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 19:20:00.155 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 20:20:00.136 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 21:20:00.126 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 22:20:00.146 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+21.10.2023 23:20:01.134 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 00:20:00.159 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 01:20:00.159 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 02:20:00.127 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 03:20:01.095 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 04:20:01.178 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 05:20:01.233 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 06:00:00.857 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+22.10.2023 06:20:01.204 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 07:20:00.098 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 08:20:01.189 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 09:20:00.141 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 10:20:01.173 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 11:20:01.199 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 12:20:00.111 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 13:20:01.189 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 14:20:00.131 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 15:20:00.227 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 16:20:00.139 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 17:20:01.129 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 18:00:00.955 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+22.10.2023 18:20:00.165 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 19:20:00.196 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 20:20:00.219 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 21:20:00.116 :: Invalid wind rose direction
+22.10.2023 21:20:00.116 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 22:20:01.158 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+22.10.2023 23:20:00.114 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 00:20:00.159 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 01:20:01.405 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 02:20:00.134 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 03:20:00.135 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 04:20:00.121 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 05:20:01.230 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 06:00:00.951 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+23.10.2023 06:20:00.190 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 07:20:00.186 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 08:20:01.189 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 09:20:00.126 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 10:20:00.223 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 11:20:00.177 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 12:20:01.299 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 13:20:00.187 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 14:20:00.238 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 15:20:01.177 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 16:20:00.180 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 17:20:00.179 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 18:00:00.940 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+23.10.2023 18:20:01.154 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 19:20:00.234 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 20:20:01.172 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 21:20:01.187 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 22:20:00.258 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+23.10.2023 23:20:00.128 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 00:20:01.136 :: Invalid wind rose direction
+24.10.2023 00:20:01.140 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 01:20:01.296 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 02:20:00.266 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 03:20:00.211 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 04:20:01.268 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 05:20:00.166 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 06:00:00.649 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+24.10.2023 06:20:00.334 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 07:20:01.307 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 08:20:01.228 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 09:20:01.208 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 10:20:01.156 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 11:20:00.144 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 12:20:01.210 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 13:20:01.180 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 14:20:00.208 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 15:20:01.157 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 16:20:00.877 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 17:20:00.196 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 18:00:01.688 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+24.10.2023 18:20:00.138 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 19:20:00.148 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 20:20:01.161 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 21:20:00.168 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 22:20:00.249 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+24.10.2023 23:20:01.385 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 00:20:01.379 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 01:20:01.152 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 02:20:00.181 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 03:20:00.295 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 04:20:01.125 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 05:20:01.271 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 06:00:02.453 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+25.10.2023 06:20:00.245 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 07:20:00.202 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 08:20:01.275 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 09:20:00.256 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 10:20:00.136 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 11:20:01.371 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 12:20:01.093 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 13:20:00.159 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 14:20:00.142 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 15:20:00.173 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 16:20:01.243 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 17:20:02.575 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 18:00:00.953 :: Writting weather forecast data to database :: Entries created = 48, Entries updated = 244
+25.10.2023 18:20:01.216 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 19:20:01.303 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 20:20:01.268 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 21:20:00.217 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 22:20:00.450 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+25.10.2023 23:20:00.445 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 00:20:00.238 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 01:20:02.098 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 02:20:00.316 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 03:20:00.610 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 04:20:00.271 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 05:20:01.580 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 06:00:01.723 :: Failed to fetch weather forecast data. Not calling SQL writer
+26.10.2023 06:20:00.263 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 07:20:00.343 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 08:20:00.282 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 09:20:00.283 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 10:20:00.266 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 11:20:00.276 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 12:20:00.306 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 13:20:00.333 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 14:20:00.277 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 15:20:00.296 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 16:20:01.209 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 17:20:00.297 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 18:00:03.057 :: Writting weather forecast data to database :: Entries created = 96, Entries updated = 196
+26.10.2023 18:20:01.008 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 19:20:01.306 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 20:20:01.435 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 21:20:01.464 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 22:20:01.440 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+26.10.2023 23:20:01.323 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+27.10.2023 00:20:01.396 :: Invalid wind rose direction
+27.10.2023 00:20:01.406 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+27.10.2023 01:20:01.369 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+27.10.2023 02:20:00.289 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+27.10.2023 03:20:00.313 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+30.10.2023 10:43:33.093 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:43:33.109 :: Application started
+30.10.2023 10:43:33.109 :: Project data loaded sucessfully
+30.10.2023 10:43:49.905 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:43:49.921 :: Application started
+30.10.2023 10:43:49.921 :: Project data loaded sucessfully

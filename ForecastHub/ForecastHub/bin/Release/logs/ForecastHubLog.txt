@@ -1,0 +1,22 @@
+30.10.2023 10:07:37.648 :: New log file created
+30.10.2023 10:07:37.669 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:07:37.670 :: Application started
+30.10.2023 10:07:37.672 :: Something went wrong while reading configuration file
+30.10.2023 10:07:37.673 :: Failed to load project data. Exiting application
+30.10.2023 10:08:36.562 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:08:36.562 :: Application started
+30.10.2023 10:08:36.577 :: Project data loaded sucessfully
+30.10.2023 10:11:15.532 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:11:15.577 :: Application started
+30.10.2023 10:11:15.577 :: Project data loaded sucessfully
+30.10.2023 10:31:22.655 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:31:22.671 :: Application started
+30.10.2023 10:31:22.671 :: Project data loaded sucessfully
+30.10.2023 10:37:38.435 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 10:37:38.489 :: Application started
+30.10.2023 10:37:38.500 :: Project data loaded sucessfully
+30.10.2023 11:09:30.812 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 11:09:30.843 :: Application started
+30.10.2023 11:09:30.843 :: Project data loaded sucessfully
+30.10.2023 11:20:01.561 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
+30.10.2023 11:40:01.180 :: Writting current weather data to database :: Entries created = 0, Entries updated = 4

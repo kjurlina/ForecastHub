@@ -62,7 +62,7 @@ namespace ForecastHub
                 .Build();
             ITrigger CDataTrigger = TriggerBuilder.Create()
                 .WithIdentity("CDataTrigger", "CDataTriggerGroup")
-                .WithCronSchedule("0 15 * ? * *") 
+                .WithCronSchedule("0 0/15 * ? * *") 
                 .Build();
             ITrigger FDataTrigger = TriggerBuilder.Create()
                 .WithIdentity("FDataTrigger", "FDataTriggerGroup")
@@ -70,7 +70,7 @@ namespace ForecastHub
                 .Build();
             ITrigger RDataTrigger = TriggerBuilder.Create()
                 .WithIdentity("RDataTrigger", "RDataTriggerGroup")
-                .WithCronSchedule("0/10 * * ? * * *")
+                .WithCronSchedule("0 0/20 * ? * *")
                 .Build();
 
             // Schedule the jobs with the triggers
@@ -153,7 +153,7 @@ namespace ForecastHub
                     {
                         using (SqlHandler SqlHandler = new SqlHandler())
                         {
-                            SqlHandler.WriteFData(Result);
+                            SqlHandler.WriteRData(Result);
                         }
                     }
                     else

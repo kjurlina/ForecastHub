@@ -181,7 +181,7 @@ namespace ForecastHub
                 // DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
                 DateTime targetTime = DateTime.Parse("2022-12-20 08:15:00");
                 int toleranceMinutes = 15;
-                int[] tagIDs = { 1371, 1372, 1373, 1374 };
+                int[] tagIDs = Project.RTTagMap.Keys.Select(key => int.Parse(key)).ToArray();
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -210,19 +210,12 @@ namespace ForecastHub
                                     int selectedTagID = reader.GetInt32(reader.GetOrdinal("tblTagDefs_fk"));
                                     DateTime timestamp = reader.GetDateTime(reader.GetOrdinal("TimeTag"));
                                     double value = reader.GetDouble(reader.GetOrdinal("Value"));
-                                    string resultString = $"TagID = {selectedTagID} :: TagTimeStamp = {timestamp} :: TagValue = {value}";
+                                    string resultString = $"{selectedTagID} :: {timestamp} :: {value}";
                                     result.Add(resultString);
                                 }
                             }
                         }
                     }
-
-                    foreach (string s in result)
-                    {
-                        Console.WriteLine(s);
-                    }
-                    Console.WriteLine();
-
                 }
 
                 return result;
@@ -301,28 +294,10 @@ namespace ForecastHub
                         {
                             float.TryParse(tagValue, NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                         }
-                        // Runtime data: start temperature
-                        else if (tagName.Contains("TO_000100_TT101"))
+                        // Runtime data
+                        else if (Project.RTTagMap.ContainsValue(tagName))
                         {
                             value = (float)ConvertToCelsius(tagValue);
-                        }
-
-                        // Runtime data: return temperature
-                        else if (tagName.Contains("TO_000100_TT101"))
-                        {
-                            value = (float)ConvertToCelsius(tagValue);
-                        }
-
-                        // Runtime data: flow
-                        else if (tagName.Contains("TO_000100_TT101"))
-                        {
-
-                        }
-
-                        // Runtime data: power
-                        else if (tagName.Contains("TO_000100_TT101"))
-                        {
-
                         }
 
                         insertCommand.Parameters.AddWithValue("@TagName", tagName);

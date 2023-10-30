@@ -108,7 +108,7 @@ namespace ForecastHub
                         // Create log file
                         CreateLogFile();
                     }
-                    else if (ChecklLogFileSize() > 1048576)
+                    else if (ChecklLogFileSize() > 5242880)
                     {
                         // If log file is too big archive it and create new one
                         ArchiveLogFile();
