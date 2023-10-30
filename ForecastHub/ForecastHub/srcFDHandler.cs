@@ -26,7 +26,7 @@ namespace ForecastHub
             string[] entry = new string[5];
 
             // Find target file name
-            if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour < 16)
+            if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour < 17)
             {
                 targetFileName = "KAR_" + DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString("00") + DateTime.Now.Day.ToString("00") + "_00.xml";
             }

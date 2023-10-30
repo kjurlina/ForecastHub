@@ -18,6 +18,15 @@ namespace ForecastHub
         public static string FTPPassword;
         public static string FTPFolder;
 
+        public static readonly Dictionary<string, string> RTTagMap = new Dictionary<string, string>
+        {
+            { "1386", "TO_000100_TT102" },
+            { "1391", "TO_000100_TT101" },
+            { "1408", "TO_000100_TT001" },
+            { "1422", "TO_000100_Q" },
+            { "1424", "TO_000100_P" }            
+        };
+
         static string[] ConfigFileContent;
         static string[] ConfigLineContent;
         static int ConfigFileNumberOfLines;
@@ -128,6 +137,12 @@ namespace ForecastHub
             {
                 return false;
             }
+        }
+
+        // Get rutnime tag name
+        public static string GetTagName(string tagId)
+        {
+            return RTTagMap.ContainsKey(tagId) ? RTTagMap[tagId] : "TagID not found";
         }
 
     }

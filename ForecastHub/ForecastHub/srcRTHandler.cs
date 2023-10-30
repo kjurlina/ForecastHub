@@ -17,8 +17,8 @@ namespace ForecastHub
         public (bool RetVal, List<string[]> Data) FetchData()
         {
             // Variables
+            DateTime ts = new DateTime();
             List<string[]> data = new List<string[]>();
-            string[] entry = new string[3];
 
             try
             {
@@ -27,10 +27,13 @@ namespace ForecastHub
                     List<string> result = SqlHandler.ReadRData();
                     foreach (string s in result)
                     {
+                        // Define string placeholder
+                        string[] entry = new string[3];
                         // Extract tag name
-                        entry[0] = DecodeTagName(s.Split(new string[] { " :: " }, StringSplitOptions.None)[0]);
+                        entry[0] = Project.GetTagName(s.Split(new string[] { " :: " }, StringSplitOptions.None)[0]);
                         // Extract tag time stamp
-                        entry[1] = s.Split(new string[] { " :: " }, StringSplitOptions.None)[1];
+                        DateTime.TryParse(s.Split(new string[] { " :: " }, StringSplitOptions.None)[1], out ts);
+                        entry[1] = ts.ToString("yyyy-MM-ddTHH:mm:ssZ");
                         // Extract tag value
                         entry[2] = s.Split(new string[] { " :: " }, StringSplitOptions.None)[2];
                         // Add entry to result
@@ -45,44 +48,7 @@ namespace ForecastHub
             }
 
             return (true, data);
-        }
-
-        // Decode tag name from tag ID
-        private string DecodeTagName(string TagID)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(TagID))
-                {
-                    return string.Empty;
-                }
-                else if (TagID.Contains("1371"))
-                {
-                    return "TO_000100_TT101";
-                }
-                else if (TagID.Contains("1372"))
-                {
-                    return "TO_000100_TT102";
-                }
-                else if (TagID.Contains("1373"))
-                {
-                    return "XX_000000_FT000";
-                }
-                else if (TagID.Contains("1374"))
-                {
-                    return "XX_000000_QT102";
-                }
-                else
-                {
-                    return string.Empty;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.ToLogFile($"Error while decoding tag name {TagID} :: {ex.Message}");
-                return string.Empty;
-            }
-        }        
+        }       
 
         // Dispose method
         public void Dispose() { }
