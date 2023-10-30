@@ -16,7 +16,7 @@ namespace ForecastHub
     {
         // Variables
         private readonly string connectionString = "Server=GTKC-TERMIS\\TERMIS;Database=termisdb;Integrated Security=True";
-        private readonly string forecastTableName = "[test].[ForecastRaw]";
+        private readonly string forecastTableName = "[dbo].[ForecastRaw]";
         private readonly string runtimeTableName = "[dbo].[tblTagVals]";
 
         // Constructor

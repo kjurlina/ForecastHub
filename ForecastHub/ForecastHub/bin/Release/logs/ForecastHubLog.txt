@@ -20,3 +20,6 @@
 30.10.2023 11:09:30.843 :: Project data loaded sucessfully
 30.10.2023 11:20:01.561 :: Writting current weather data to database :: Entries created = 4, Entries updated = 0
 30.10.2023 11:40:01.180 :: Writting current weather data to database :: Entries created = 0, Entries updated = 4
+30.10.2023 12:16:31.592 :: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+30.10.2023 12:16:31.656 :: Application started
+30.10.2023 12:16:31.662 :: Project data loaded sucessfully
