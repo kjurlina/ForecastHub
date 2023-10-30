@@ -165,7 +165,11 @@ namespace ForecastHub
             }
             if (entriesCreated > 0)
             {
-                Logger.ToLogFile($"Writting weather forecast data to database :: Entries created = {entriesCreated}");
+                Logger.ToLogFile($"Writting runtime data to database :: Entries created = {entriesCreated}");
+            }
+            else
+            {
+                Logger.ToLogFile($"Writting weather forecast data to database :: No new entries found");
             }
         }
 
@@ -178,8 +182,7 @@ namespace ForecastHub
             {
                 // Define SQL query paramaters
                 DateTime now = DateTime.Now;
-                // DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
-                DateTime targetTime = DateTime.Parse("2022-12-20 08:15:00");
+                DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
                 int toleranceMinutes = 15;
                 int[] tagIDs = Project.RTTagMap.Keys.Select(key => int.Parse(key)).ToArray();
 
