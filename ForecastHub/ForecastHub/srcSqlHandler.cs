@@ -169,7 +169,7 @@ namespace ForecastHub
             }
             else
             {
-                Logger.ToLogFile($"Writting weather forecast data to database :: No new entries found");
+                Logger.ToLogFile($"Writting runtime data to database :: No new entries found");
             }
         }
 
@@ -181,8 +181,9 @@ namespace ForecastHub
             try 
             {
                 // Define SQL query paramaters
-                DateTime now = DateTime.Now;
-                DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                DateTime nowCET = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time"));
+                DateTime nowUTC = TimeZoneInfo.ConvertTimeToUtc(nowCET);
+                DateTime targetTime = new DateTime(nowUTC.Year, nowUTC.Month, nowUTC.Day, nowUTC.Hour, nowUTC.Minute, 0);
                 int toleranceMinutes = 15;
                 int[] tagIDs = Project.RTTagMap.Keys.Select(key => int.Parse(key)).ToArray();
 
@@ -297,10 +298,22 @@ namespace ForecastHub
                         {
                             float.TryParse(tagValue, NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                         }
-                        // Runtime data
-                        else if (Project.RTTagMap.ContainsValue(tagName))
+                        // Runtime data - temperature
+                        else if (tagName.Contains("TO_000100_TT"))
                         {
                             value = (float)ConvertToCelsius(tagValue);
+                        }
+                        // Runtime data - power
+                        else if (tagName.Contains("TO_000100_P"))
+                        {
+                            float.TryParse(tagValue.Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out value);
+                            value *= 0.000001f;
+                        }
+                        // Runtime data - flow
+                        else if (tagName.Contains("TO_000100_Q"))
+                        {
+                            float.TryParse(tagValue.Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out value);
+                            value *= 3600.0f;
                         }
 
                         insertCommand.Parameters.AddWithValue("@TagName", tagName);
@@ -426,26 +439,26 @@ namespace ForecastHub
         }
 
         // Method to decode °C to °F
-        private double ConvertToCelsius(string Fahrenheit)
+        private double ConvertToCelsius(string Kelvin)
         {
-            if (string.IsNullOrEmpty(Fahrenheit))
+            if (string.IsNullOrEmpty(Kelvin))
             {
-                Logger.ToLogFile($"Error while converting F to C :: String null or empty");
+                Logger.ToLogFile($"Error while converting K to C :: String null or empty");
                 return -273.15;
             }
-            else if (!double.TryParse(Fahrenheit, out double fahrenheit))
+            else if (!double.TryParse(Kelvin, out double kelvin))
             {
-                Console.WriteLine($"Error while converting F to C :: Could not convert string to double");
+                Console.WriteLine($"Error while converting K to C :: Could not convert string to double");
                 return -273.15;
             }
-            else if (fahrenheit < -459.67)
+            else if (kelvin < -273.15)
             {
-                Console.WriteLine($"Error while converting F to C :: Input temperature below absolute zero");
+                Console.WriteLine($"Error while converting K to C :: Input temperature below absolute zero");
                 return -273.15;
             }
             else
             {
-                double celsius = (fahrenheit - 32) * 5 / 9;
+                double celsius = kelvin - 273.15;
                 return celsius;
             }
         }

@@ -70,7 +70,7 @@ namespace ForecastHub
                 .Build();
             ITrigger RDataTrigger = TriggerBuilder.Create()
                 .WithIdentity("RDataTrigger", "RDataTriggerGroup")
-                .WithCronSchedule("0 20 * ? * *")
+                .WithCronSchedule("0 0/15 * ? * *")
                 .Build();
 
             // Schedule the jobs with the triggers
