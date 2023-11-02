@@ -20,11 +20,11 @@ namespace ForecastHub
 
         public static readonly Dictionary<string, string> RTTagMap = new Dictionary<string, string>
         {
-            { "1386", "TO_000100_TT102" },
-            { "1391", "TO_000100_TT101" },
-            { "1408", "TO_000100_TT001" },
-            { "1422", "TO_000100_Q" },
-            { "1424", "TO_000100_P" }            
+            { "1386", "Karlovac_ReturnTemperature_RT" },
+            { "1391", "Karlovac_FlowTemperature_RT" },
+            { "1408", "Karlovac_OutdoorTemperature_RT" },
+            { "1422", "Karlovac_HeatFlow_RT" },
+            { "1424", "Karlovac_HeatPower_RT" }            
         };
 
         static string[] ConfigFileContent;
