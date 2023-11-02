@@ -274,7 +274,7 @@ namespace ForecastHub
                     {
                         float value = (float)0.0;
                         // Temperature and wind speed are casted directly
-                        if (tagName.Contains("Temperature") || tagName.Contains("WindSpeed"))
+                        if (tagName.Contains("Karlovac_Temperature_F") || tagName.Contains("Karlovac_Temperature_RT") || tagName.Contains("WindSpeed"))
                         {
                             float.TryParse(tagValue, NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                         }
@@ -299,18 +299,18 @@ namespace ForecastHub
                             float.TryParse(tagValue, NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                         }
                         // Runtime data - temperature
-                        else if (tagName.Contains("TO_000100_TT"))
+                        else if (tagName.Contains("Karlovac_FlowTemperature_RT") || tagName.Contains("Karlovac_ReturnTemperature_RT") || tagName.Contains("Karlovac_OutdoorTemperature_RT"))
                         {
                             value = (float)ConvertToCelsius(tagValue);
                         }
                         // Runtime data - power
-                        else if (tagName.Contains("TO_000100_P"))
+                        else if (tagName.Contains("Karlovac_HeatPower_RT"))
                         {
                             float.TryParse(tagValue.Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                             value *= 0.000001f;
                         }
                         // Runtime data - flow
-                        else if (tagName.Contains("TO_000100_Q"))
+                        else if (tagName.Contains("Karlovac_HeatFlow_RT"))
                         {
                             float.TryParse(tagValue.Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out value);
                             value *= 3600.0f;
